@@ -1,0 +1,365 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 시작 */
+
+:root {
+  --color-bg-dark: #ebe7e7;
+  --color-bg: #fdfffd;
+  --color-grey: #d1d1d1;
+  --color-text: #22243b;
+  --color-accent: #f16e03;
+  --color-white: white;
+  --color-scrollbar: black;
+}
+
+body {
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+/* todo */
+
+.todo {
+  width: 100%;
+  height: 80%;
+  max-width: 500px;
+  background-color: var(--color-bg);
+  overflow: hidden;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 15px 3px #878787;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0.5rem;
+  align-items: center;
+  background-color: var(--color-bg-dark);
+  font-size: x-large;
+  font-family: "NanumSquareNeo-Variable";
+  opacity: 0.7;
+
+  /* border-bottom: 0.5px solid var(--color-text); */
+}
+
+#todo-list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.todo-list__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin: 0.1rem 0;
+  color: var(--color-text);
+  font-family: "NanumSquareNeo-Variable";
+  font-size: large;
+}
+
+#todo-form {
+  width: 100%;
+  display: flex;
+  padding: 1.4rem 1rem;
+  background-color: var(--color-bg-dark);
+}
+
+.todo-form__input {
+  flex: 1 0 auto;
+  font-size: 1.4rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  opacity: 0.7;
+}
+
+.todo-list__btn {
+  cursor: pointer;
+  border: 0px solid black;
+  background-color: transparent;
+  object-fit: contain;
+  transition: all 300ms ease-in;
+  transform: scale(2);
+}
+
+.todo-list__btn:hover {
+  transform: scale(3);
+}
+
+/* information */
+
+.info {
+  width: 100%;
+  height: 80%;
+  max-width: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* login */
+
+#login-form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1.3rem 0.5rem;
+  background-color: var(--color-bg-dark);
+  border-radius: 0.7rem;
+}
+
+#login-form.hidden {
+  display: none;
+}
+
+.login-form__input {
+  flex: 0 1 auto;
+  font-size: 1.4rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  opacity: 0.7;
+}
+
+.login-form__btn {
+  border: 0px solid white;
+  background-color: var(--color-text);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: var(--color-grey);
+}
+
+#greeting {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0.5rem;
+  border-radius: 1rem;
+  align-items: center;
+  background-color: var(--color-bg-dark);
+  font-size: x-large;
+  font-family: "NanumSquareNeo-Variable";
+}
+
+#greeting.hidden {
+  display: none;
+}
+
+/* 시계 */
+
+.second {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
+}
+.clock-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  height: 30vh;
+  background-color: var(--color-bg-dark);
+  border-radius: 1rem;
+  opacity: 0.9;
+  position: relative;
+  box-shadow: 1px 1px 15px 3px #878787;
+}
+
+.clock {
+  font-family: "NanumSquareNeo-Variable";
+  font-size: 36px;
+}
+
+#weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 45%;
+  height: 100%;
+  background-color: var(--color-bg-dark);
+  border-radius: 1rem;
+  box-shadow: 1px 1px 15px 3px #878787;
+  font-family: "NanumSquareNeo-Variable";
+  font-size: 32px;
+}
+
+/* Quote */
+
+@font-face {
+  font-family: "NotoSerifKR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#quote {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 2.5rem 0.5rem;
+  border-radius: 1rem;
+  align-items: center;
+  background-color: var(--color-bg-dark);
+  font-size: large;
+  font-family: "NotoSerifKR";
+}
+
+.quote-first {
+  width: 80%;
+}
+
+.quote-second {
+  margin-top: 30px;
+  align-items: flex-end;
+}

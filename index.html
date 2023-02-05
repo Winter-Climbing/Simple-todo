@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/3b07a93f56.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/clock.js" defer></script>
+    <script src="./js/login.js" defer></script>
+    <script src="./js/todo.js" defer></script>
+    <script src="./js/background.js" defer></script>
+    <script src="./js/weather.js" defer></script>
+    <script src="./js/quote.js" defer></script>
+  </head>
+
+  <body>
+    <!--  todo -->
+    <section class="todo">
+      <header class="todo-header">To Do List!</header>
+      <ul id="todo-list"></ul>
+      <form id="todo-form">
+        <input
+          type="text"
+          placeholder="Write a To Do and Press Enter"
+          class="todo-form__input"
+          required
+        />
+      </form>
+    </section>
+    <!-- 로그인 -->
+    <section class="info">
+      <form class="hidden" id="login-form">
+        <input
+          class="login-form__input"
+          required
+          maxlength="15"
+          type="text"
+          placeholder="What is your name?"
+        />
+        <input type="submit" value="Log In" class="login-form__btn" />
+      </form>
+      <h1 id="greeting" class="hidden"></h1>
+      <div class="second">
+        <!-- 시계 -->
+        <div class="clock-box">
+          <h2 class="clock"></h2>
+        </div>
+        <!-- 계절 -->
+        <div id="weather">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- 인용구 -->
+      <div id="quote">
+        <span class="quote-first"></span>
+        <span class="quote-second"></span>
+      </div>
+    </section>
+  </body>
+</html>
